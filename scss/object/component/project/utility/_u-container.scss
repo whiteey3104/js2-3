@@ -1,0 +1,9 @@
+.u-container__modal{
+    margin: 0 auto;
+    width: 55%;
+    
+        @include TB{
+            width: 91%;
+        }
+    
+}

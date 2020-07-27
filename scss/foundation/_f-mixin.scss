@@ -1,0 +1,18 @@
+@mixin TB{
+    @media (min-width: 481px) {
+        @content;
+    }
+}
+
+@mixin PC{
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin over{
+    @media(min-width:1920px){
+        @content;
+    }
+}
+

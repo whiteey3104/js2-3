@@ -1,0 +1,39 @@
+.c-button__close{
+    width:32px;
+    height:32px;
+    font-size: 32px;
+    color:$white;
+    text-align: right;
+}
+
+
+.c-button__menu{
+    color:$white;
+    box-sizing: content-box;
+    width: 23px;
+    height:18px;
+
+    @include PC{
+        display: none;
+    }
+
+    &::after{
+        display: block;
+        content:"";
+        width: 23px;
+        height: 2px;
+        background-color: $white;
+        transform: translateY(5px);
+    }
+
+    &::before{
+        display: block;
+        content:"";
+        width: 23px;
+        height: 2px;
+        background-color: $white;
+        transform: translateY(-7px);
+        box-shadow: 0 7px;
+    }
+
+}

@@ -1,0 +1,103 @@
+.l-modal{
+    color: $white;
+    font-family: $font;
+    width: 83%;
+    height: 100%;
+    transition: left .5s, right .5s;
+    position: fixed;
+    z-index: 1;
+    right: -2000px;
+    top: -2000px;
+    background-color: rgba(0, 0, 0, 0.7);
+
+        @include TB{
+            width: 100%;
+            transition: top .5s, bottom .5s;
+            top: -2000px;
+            right: -2000px;
+        }
+
+
+        &.js-is-show{
+            right: 0;
+            top: 0;
+        }
+
+        &__potision{
+            position: relative;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+        }
+
+
+        &__inner{
+            width:85%;
+            height:62px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top:0;
+
+            @include TB{
+                width: 91%;
+            }
+        }
+
+        &__nav{
+            margin: calc(100vw*0.15) auto;
+                @include TB{
+                    margin: calc(100vw*0.03) auto;
+                }
+        }
+
+        &__list{
+            font-size: 15px;
+            height:370px;
+            margin-bottom: calc(100vw*0.20);
+            flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+                @include TB{
+                    font-size: 1.8vw;
+                    margin-bottom: calc((100vw*0.05)*-1);
+                    height: calc(100vw*0.38);
+                }
+        }
+
+        &__list-link{
+            text-align: center;
+            color:$white;
+            display: inline-block;
+                &::after{
+                    font-size: 13px;
+                    margin-top: 10px;
+                    display: block;
+                    color:$white;
+                        @include TB{
+                            margin-top:calc(100vw*0.01);
+                            font-size: 0.58em;
+                        }
+                }
+        }
+
+        &__icon{
+            display: flex;
+            justify-content: space-between;
+                @include TB{
+                    float:right;
+                    width: 15%;
+                }
+            }
+}
+
+.fab{
+    font-size: 48px;
+        @include TB{
+            font-size: 5vw;
+        }
+}
+
+
